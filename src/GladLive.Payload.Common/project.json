@@ -1,34 +1,40 @@
 ﻿{
   "version": "1.0.0-*",
 
-  "dependencies": {
-	
-  },
+	"dependencies": {
+		"GladNet.Payload": "2.0.32",
+		"GladNet.Serializer": "2.0.32"
+	},
 
 	"frameworks": {
-		"netstandard1.6": {
-			"imports": "dnxcore50",
-			"dependencies": {
-				"NETStandard.Library": "1.6.0"
-			}
-		},
+					"net35": {
+						"dependencies": {
+						}
+					},
 
-		"net35": {
-		},
+					"net40": {
+						"dependencies": {
+						}
+					},
 
-		"net40": {
-		},
+					"net45": {
+						"dependencies": {
+						}
+					},
 
-		"net45": {
-		},
+					"net452": {
+						"dependencies": {
+						}
+					},
 
-		"net452": {
-		},
+					"net46": {
+						"dependencies": {
+						}
+					},
 
-		"net46": {
-		},
-
-		"net461": {
-		}
+					"net461": {
+						"dependencies": {
+						}
+					}
 	}
 }
