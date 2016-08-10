@@ -1,4 +1,4 @@
-# GladLive.AuthService.ASP
+# GladLive.Payload
 
 GladLive is network service comparable to Xboxlive or Steam. 
 
