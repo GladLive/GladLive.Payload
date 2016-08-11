@@ -1,5 +1,4 @@
 ﻿using GladLive.Payload.Common;
-using GladLive.Payload.Profile.Enums.Payload;
 using GladNet.Payload;
 using GladNet.Serializer;
 using System;
@@ -14,7 +13,7 @@ namespace GladLive.Payload.Profile
 	/// </summary>
 	[GladNetSerializationContract]
 	[GladLivePayload(GladLivePayloadMessageType.GetMinimumProfilesResponse)]
-	public class GetMinimumProfilesResponsePayload : PacketPayload, IResponseStatus<MinimumProfilesResponseCode>
+	public class MinimumProfilesResponsePayload : PacketPayload, IResponseStatus<MinimumProfilesResponseCode>
 	{
 		/// <summary>
 		/// Response status; the response code of the request.
@@ -36,20 +35,20 @@ namespace GladLive.Payload.Profile
 #endif
 
 		/// <summary>
-		/// Creates a <see cref="GetMinimumProfilesResponsePayload"/> with only a <see cref="MinimumProfilesResponseCode"/>.
+		/// Creates a <see cref="MinimumProfilesResponsePayload"/> with only a <see cref="MinimumProfilesResponseCode"/>.
 		/// </summary>
 		/// <param name="responseCode">Response code.</param>
-		public GetMinimumProfilesResponsePayload(MinimumProfilesResponseCode responseCode)
+		public MinimumProfilesResponsePayload(MinimumProfilesResponseCode responseCode)
 		{
 			ResponseCode = responseCode;
 		}
 
 		/// <summary>
-		/// Creates a <see cref="GetMinimumProfilesResponsePayload"/> with a <see cref="MinimumProfilesResponseCode"/>
+		/// Creates a <see cref="MinimumProfilesResponsePayload"/> with a <see cref="MinimumProfilesResponseCode"/>
 		/// and collection of profiles.
 		/// </summary>
 		/// <param name="responseCode">Response code.</param>
-		public GetMinimumProfilesResponsePayload(MinimumProfilesResponseCode responseCode, List<MinimumProfileDataModel> profiles)
+		public MinimumProfilesResponsePayload(MinimumProfilesResponseCode responseCode, List<MinimumProfileDataModel> profiles)
 		{
 			//Don't check profiles. We expect null or emprt sometimes. We can't force calling code to call other ctor.
 			//We don't want to throw on the server either because it opens us up to service disruption.
@@ -59,11 +58,11 @@ namespace GladLive.Payload.Profile
 		}
 
 		/// <summary>
-		/// Creates a <see cref="GetMinimumProfilesResponsePayload"/> with a <see cref="MinimumProfilesResponseCode"/> and
+		/// Creates a <see cref="MinimumProfilesResponsePayload"/> with a <see cref="MinimumProfilesResponseCode"/> and
 		/// a single profile response.
 		/// </summary>
 		/// <param name="responseCode">Response code.</param>
-		public GetMinimumProfilesResponsePayload(MinimumProfilesResponseCode responseCode, MinimumProfileDataModel profile)
+		public MinimumProfilesResponsePayload(MinimumProfilesResponseCode responseCode, MinimumProfileDataModel profile)
 			: this(responseCode, new List<MinimumProfileDataModel>(1) { profile })
 		{
 
@@ -72,7 +71,7 @@ namespace GladLive.Payload.Profile
 		/// <summary>
 		/// Protected serializer ctor.
 		/// </summary>
-		protected GetMinimumProfilesResponsePayload()
+		protected MinimumProfilesResponsePayload()
 		{
 
 		}

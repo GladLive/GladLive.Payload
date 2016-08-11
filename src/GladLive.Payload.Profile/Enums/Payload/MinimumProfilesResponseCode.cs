@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace GladLive.Payload.Profile.Enums.Payload
+namespace GladLive.Payload.Profile
 {
 	/// <summary>
 	/// Indicates the status of the <see cref="GladLivePayloadMessageType.GetMinimumProfilesResponse"/>.

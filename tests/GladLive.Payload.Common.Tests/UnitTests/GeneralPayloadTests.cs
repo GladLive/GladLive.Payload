@@ -111,7 +111,7 @@ namespace GladLive.Payload.Common.Tests
 		/// <summary>
 		/// Inheritors can override this Type and be able to type their payloads without reimplementing the tests.
 		/// </summary>
-		protected virtual Type TypeToUseToFindAssembly { get; } = typeof(PayloadRegistrationExtensions);
+		protected virtual Type TypeToUseToFindAssembly { get; } = typeof(GladLiveCommonPayloadRegistrationExtensions);
 
 		protected IEnumerable<Type> GetPacketPayloadTypes()
 		{

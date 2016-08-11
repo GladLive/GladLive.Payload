@@ -49,6 +49,18 @@ namespace GladLive.Payload.Common
 		/// Represents a the response for <see cref="GetProfileDetailsRequest"/> for profile details. This request represents the concept of closer player inspection of a particular profile. This could contain
 		/// information that wouldn't otherwise be immediately important to the enduser in a typical setting.
 		/// </summary>
-		GetProfileDetailsResponse = GladNetIncludeIndex.Index6
+		GetProfileDetailsResponse = GladNetIncludeIndex.Index6,
+
+		/// <summary>
+		/// Represents a request for private details related to the user. This is conceptually data that is unavailable to the average user
+		/// such as personal information that only authenticated users or users of higher level priveleges can query for.
+		/// </summary>
+		GetPrivateUserProfileDetailsRequest = GladNetIncludeIndex.Index7,
+
+		/// <summary>
+		/// Represents a request for private details related to the user. This is conceptually data that is unavailable to the average user
+		/// such as personal information that only authenticated users or users of higher level priveleges can query for.
+		/// </summary>
+		GetPrivateUserProfileDetailsResponse = GladNetIncludeIndex.Index8
 	}
 }

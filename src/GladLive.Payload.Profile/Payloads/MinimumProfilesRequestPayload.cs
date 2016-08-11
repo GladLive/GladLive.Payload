@@ -13,7 +13,7 @@ namespace GladLive.Payload.Profile
 	/// </summary>
 	[GladNetSerializationContract]
 	[GladLivePayload(GladLivePayloadMessageType.GetMinimumProfilesRequest)]
-	public class GetMinimumProfilesRequestPayload : PacketPayload
+	public class MinimumProfilesRequestPayload : PacketPayload
 	{
 		/// <summary>
 		/// Serialized profile names to query about.
@@ -28,11 +28,11 @@ namespace GladLive.Payload.Profile
 		public IEnumerable<string> ProfileNames { get { return internalProfileNamesList; } }
 
 		/// <summary>
-		/// Creates a new <see cref="GetMinimumProfilesRequestPayload"/> that requests information about multiple
+		/// Creates a new <see cref="MinimumProfilesRequestPayload"/> that requests information about multiple
 		/// profiles.
 		/// </summary>
 		/// <param name="profilesDesired">Profiles to request.</param>
-		public GetMinimumProfilesRequestPayload(IList<string> profilesDesired)
+		public MinimumProfilesRequestPayload(IList<string> profilesDesired)
 		{
 			if (profilesDesired == null || profilesDesired.Count == 0)
 				throw new ArgumentException($"Provided profiles must not be null or empty.", nameof(profilesDesired));
@@ -41,10 +41,10 @@ namespace GladLive.Payload.Profile
 		}
 
 		/// <summary>
-		/// Creates a new <see cref="GetMinimumProfilesRequestPayload"/> that requests information about a single profile.
+		/// Creates a new <see cref="MinimumProfilesRequestPayload"/> that requests information about a single profile.
 		/// </summary>
 		/// <param name="profileName"></param>
-		public GetMinimumProfilesRequestPayload(string profileName)
+		public MinimumProfilesRequestPayload(string profileName)
 			: this(new List<string>(1) { profileName })
 		{
 
@@ -53,7 +53,7 @@ namespace GladLive.Payload.Profile
 		/// <summary>
 		/// Protected serializer ctor.
 		/// </summary>
-		protected GetMinimumProfilesRequestPayload()
+		protected MinimumProfilesRequestPayload()
 		{
 
 		}
