@@ -9,7 +9,7 @@ namespace GladLive.Payload.Common
 	/// <summary>
 	/// This response is paired with the <see cref="HelloRequest"/> and indicates the result of the Hello. Some servers in the distributed network
 	/// may not support Hellos from users it has never seen before. This may be because setup for a user may be too lengthy to do at runtime on the server it's communicating with.
-	/// Complex queuries to generate the 
+	/// Complex queuries to generate the user.
 	/// </summary>
 	[GladNetSerializationContract]
 	[GladLivePayload(GladLivePayloadMessageType.HelloResponse)]
