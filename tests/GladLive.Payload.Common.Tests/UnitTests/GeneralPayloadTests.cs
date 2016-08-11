@@ -67,6 +67,12 @@ namespace GladLive.Payload.Common.Tests
 					failedTypes.Add(t);
 					logger.WriteLine($"***ERROR***: {t?.FullName} doesn't implement a parameterless constructor All GladNet serializable types must implement atleast a protected parameterless ctor.");
 				}
+
+				if (t.GetConstructors(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance).Where(ctor => ctor.IsPublic).Count() == 0)
+				{
+					failedTypes.Add(t);
+					logger.WriteLine($"***ERROR***: {t?.FullName} doesn't implement any public constructor All GladNet serializable types must implement atleast a 1 public ctor.");
+				}
 			}
 
 			if (failedTypes.Count > 0)

@@ -20,9 +20,9 @@ namespace GladLive.Payload.Common
 		//JWT: Sent in Header and reabable on ASP servers.
 
 		/// <summary>
-		/// Protected serialization ctor.
+		/// Constructs a new <see cref="HelloRequestPayload"/> instance.
 		/// </summary>
-		protected HelloRequestPayload()
+		public HelloRequestPayload()
 		{
 
 		}
