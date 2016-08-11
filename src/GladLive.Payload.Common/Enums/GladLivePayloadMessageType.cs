@@ -31,13 +31,13 @@ namespace GladLive.Payload.Common
 		/// Represents a request for the minimum profile. This may be just the level or maybe rank or a player. It represents the concept of
 		/// the least extensive and quichest to service profile data for the user.
 		/// </summary>
-		GetMinimumProfileRequest = GladNetIncludeIndex.Index3,
+		GetMinimumProfilesRequest = GladNetIncludeIndex.Index3,
 
 		/// <summary>
-		/// Represents a response for <see cref="GetMinimumProfileRequest"/> for the minimum profile. This may be just the level or maybe rank or a player. It represents the concept of
+		/// Represents a response for <see cref="GetMinimumProfilesRequest"/> for the minimum profile. This may be just the level or maybe rank or a player. It represents the concept of
 		/// the least extensive and quichest to service profile data for the user.
 		/// </summary>
-		GetMinimumProfileResponse = GladNetIncludeIndex.Index4,
+		GetMinimumProfilesResponse = GladNetIncludeIndex.Index4,
 
 		/// <summary>
 		/// Represents a level 2 request for profile details. This request represents the concept of closer player inspection of a particular profile. This could contain
