@@ -27,6 +27,7 @@ namespace GladLive.Payload.Common
 		/// </summary>
 		HelloResponse = GladNetIncludeIndex.Index2,
 
+		#region PROFILE MESSAGES
 		/// <summary>
 		/// Represents a request for the minimum profile. This may be just the level or maybe rank or a player. It represents the concept of
 		/// the least extensive and quichest to service profile data for the user.
@@ -58,9 +59,34 @@ namespace GladLive.Payload.Common
 		GetPrivateUserProfileDetailsRequest = GladNetIncludeIndex.Index7,
 
 		/// <summary>
-		/// Represents a request for private details related to the user. This is conceptually data that is unavailable to the average user
+		/// Represents a response for private details related to the user. This is conceptually data that is unavailable to the average user
 		/// such as personal information that only authenticated users or users of higher level priveleges can query for.
 		/// </summary>
-		GetPrivateUserProfileDetailsResponse = GladNetIncludeIndex.Index8
+		GetPrivateUserProfileDetailsResponse = GladNetIncludeIndex.Index8,
+
+		#endregion
+
+		#region LOBBY MESSAGES
+		/// <summary>
+		/// Represents a request to register the current user's lobby in the lobby system.
+		/// </summary>
+		RegisterNewLobbyRequest = GladNetIncludeIndex.Index9,
+
+		/// <summary>
+		/// Represents a response that provides the details about the result of the attempted <see cref="RegisterNewLobbyRequest"/>.
+		/// </summary>
+		RegisterNewLobbyResponse = GladNetIncludeIndex.Index10,
+
+		/// <summary>
+		/// Represents a request to update the current lobby settings. This could include a change in gametype, privacy permissions or
+		/// a change in maximum allowed player count.
+		/// </summary>
+		UpdateLobbyStatusRequest = GladNetIncludeIndex.Index11,
+
+		/// <summary>
+		/// Represents a response that provides the details about the result of the attempted <see cref="UpdateLobbyStatusRequest"/>.
+		/// </summary>
+		UpdateLobbyStatusResponse = GladNetIncludeIndex.Index12,
+		#endregion
 	}
 }
