@@ -6,12 +6,12 @@ using GladLive.Payload.Common;
 namespace GladLive.Payload.Lobby
 {
 	/// <summary>
-	/// Indicates the status of the <see cref="GladLivePayloadMessageType.RegisterNewLobbyRequest"/>.
+	/// Indicates the status of the <see cref="GladLivePayloadMessageType.UpdateLobbyStatusResponse"/>.
 	/// </summary>
-	public enum RegisterNewLobbyResponseCode : byte
+	public enum UpdateLobbyStatusResponseCode : byte
 	{
 		/// <summary>
-		/// Represents an unknown <see cref="GladLivePayloadMessageType.RegisterNewLobbyRequest"/> state.
+		/// Represents an unknown <see cref="GladLivePayloadMessageType.UpdateLobbyStatusResponse"/> state.
 		/// </summary>
 		Unknown = 0,
 
@@ -26,13 +26,8 @@ namespace GladLive.Payload.Lobby
 		SuspendedRegistrationPriveleges = 2,
 
 		/// <summary>
-		/// Indicates that the user has sent invalid details for lobby registration.
+		/// Indicates that the <see cref="GladLivePayloadMessageType.UpdateLobbyStatusResponse"/> was successful.
 		/// </summary>
-		InvalidLobbyDetails = 3,
-
-		/// <summary>
-		/// Indicates that the <see cref="GladLivePayloadMessageType.RegisterNewLobbyRequest"/> was successful.
-		/// </summary>
-		Success = 4,
+		Success = 3,
 	}
 }

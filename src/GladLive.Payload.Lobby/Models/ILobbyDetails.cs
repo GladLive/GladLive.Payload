@@ -19,6 +19,11 @@ namespace GladLive.Payload.Lobby
 		/// </summary>
 		int MaximumCapacity { get; }
 
+		/// <summary>
+		/// Indicates the current used capacity of the lobby.
+		/// </summary>
+		int UsedCapacity { get; }
+
 		//This marks a type as a type that contains details about the lobby
 		//This information could be the GameType or MapType maximum or current capacity
 	}

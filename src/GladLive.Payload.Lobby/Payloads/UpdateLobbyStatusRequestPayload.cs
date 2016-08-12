@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace GladLive.Payload.Lobby.Payloads
+namespace GladLive.Payload.Lobby
 {
 	/// <summary>
 	/// Represents a request to update the current lobby settings. This could include a change in gametype, privacy permissions or
